@@ -1,0 +1,284 @@
+\documentclass{book}
+
+\usepackage{multicol} 
+\usepackage{geometry}
+\usepackage{blindtext}
+\usepackage[fleqn]{amsmath}
+\usepackage{MnSymbol}
+\usepackage{wasysym}
+\usepackage[utf8]{inputenc}
+\usepackage[italian]{babel}
+
+
+\geometry{a3paper, top=0.5cm, bottom=0.5cm, left=0.5cm, right=0.5cm} %, heightrounded, bindingoffset=5mm} %impostare i margini
+\everymath{\displaystyle} %impostare il displaystyle su tutto il doc
+\setlength\parindent{0pt} %rimuovere indentazione ogni volta che si va a capo
+\setlength\mathindent{0pt}
+
+\newcommand{\g}{\textbf}
+\newcommand{\h}{\mathbf}
+\newcommand{\e}{\begin{equation}} 
+\newcommand{\ex}{\end{equation} }
+\renewcommand{\it}{\item[$\cdot$]}
+
+\begin{document}
+\begin{multicols*}{4}
+\begin{itemize}
+
+\item [$\blacksquare$] \g{FONDAMENTALI}
+    \it \g{Teorema (divergenza)}
+        \e{\int_\Sigma \h{F} \cdot d \h{\Sigma}= \int_\tau \nabla \cdot \h{F} d\tau} \ex
+    \it \g{Teorema (Stokes)}
+        \e{\oint_\gamma\h{F}\cdot d\h{s}=\int_\Sigma \nabla \times \h{F} d\h{\Sigma}} \ex
+    \it \g{Teorema (Gradiente)}
+        \e{\phi_2-\phi_1=\int_\gamma\nabla\phi\cdot d\h{s} }\ex
+    \it \g{Flusso di un campo}
+        \e{ \Phi_\Sigma(\h{E})=\oint_\Sigma \h{E}\cdot d\h{\Sigma}   
+        } \ex
+    \it \g{Equazioni di Maxwell} \\
+        Nel vuoto:
+        \e{\nabla\cdot\h{E}=\frac{\rho}{\varepsilon_0}}\ex
+        \e{\nabla\times\h{E}=-\frac{\partial \h{B}}{\partial t}} \ex
+        \e{\nabla\cdot\h{B}}=0\ex
+        \e{\nabla\times\h{B}=\mu_0\h{J}+\mu_0\varepsilon_0\frac{\partial \h{E}}{\partial t}} \ex
+        \e{\oint_\Sigma\h{E}\cdot d\h{\Sigma}=\frac{Q_{int}}{\varepsilon_0}} \ex
+        \e{\oint_\Gamma\h{E}\cdot d\h{s}=-\frac{d \Phi(\h{B})}{dt}} \ex
+        \e{\oint_\Sigma\h{B}\cdot d\h{\Sigma}=0} \ex
+        \e{\oint_\Gamma\h{B}\cdot d\h{s}=\mu_0 I_{conc} +\mu_0\varepsilon_0\frac{d \Phi_E}{d t}} \ex
+        Nei mezzi:
+        \e{\nabla\cdot\h{D}=\rho_{libere}}\ex
+        \e{\nabla\times\h{H}=\h{J}_{C,lib}+\frac{\partial\h{D}}{\partial t}} \ex
+        \e{\oint_\Sigma\h{D}\cdot d\h{\Sigma}=Q_{int,lib}} \ex
+        \e{\oint_\Gamma\h{H}\cdot d\h{s}=I_{conc,lib} + \frac{d \Phi_D}{d t}} \ex
+
+\item [$\blacksquare$] \g{ELETTROSTATICA}
+    \it \g{Forza di Coulomb}
+        \e{\h{F}=\frac{q_1 1_2}{4\pi\varepsilon_0 r^2}\h{u}_{1,2}} \ex
+    \it \g{Definizione campo elettrico}
+        \e{\h{E}=\frac{\h{F}(\h{r}_0)}{q_0}} \ex
+    \it \g{En. potenziale due cariche}
+        \e{U=\frac{q_1q_2}{4\pi\varepsilon_0r_{1,2}}+c} \ex
+    \it \g{Potenziale scalare V}
+        \e{V(\h{r})=\frac{U(\h{r})}{q_0}} \ex
+        \e{V(B)-V(A)=-\int_A^B\h{E}\cdot d \h{r}} \ex
+        \e{\h{E}=-\nabla V} \ex
+    \it \g{Energia di E}
+        \e{U=\frac{1}{2} \int_{\mathbb{R}^3} \rho(\h{r}) V(\h{r}) d\tau} \ex
+        \e{U=\frac{1}{2}\varepsilon_0\int_{\mathbb{R}^3}\h{E}^2 d\tau} \ex
+    \it \g{E e V di particolari distribuzioni}
+    Carica puntiforme 
+        \e{\h{E}=\frac{q}{4\pi\varepsilon_0 r^2}\h{u}_{r}} \ex
+        \e{V=\frac{q}{4\pi\varepsilon_0 r}} \ex
+    Sfera carica uniformemente
+        \e{ \h{E}(r)=\begin{cases} 
+        \frac{Qr}{4\pi\varepsilon_0 R^3}=\frac{3 \rho r}{\varepsilon_0} \mathrm{\ se\ r<R}\\
+        \frac{Q}{4\pi\varepsilon_0 R^2} \ \ \ \ \ \ \ \mathrm{\ se\ r\geq R}\end{cases} } \ex
+        \e{ V(r)=\begin{cases} 
+        \frac{\rho (3R^2-r^2}{6\varepsilon_0 } \ \ \  \mathrm{\ se\ r<R}\\
+        \frac{Q}{4\pi\varepsilon_0 R} \ \ \ \ \ \ \ \mathrm{\ se\ r\geq R}\end{cases} } \ex
+    Filo infinito con carica uniforme $\lambda$
+        \e{\h{E}(r)=\frac{\lambda}{2\pi\varepsilon_0 r} \h{u}_r} \ex
+        \e{V(r)=\frac{\lambda}{2\pi\varepsilon} \ln \biggl(\frac{r_0}{r}\biggr)} \ex
+    Piano $\Sigma$ infinito con carica uniforme
+        \e{\h{E}=\frac{\sigma}{2\varepsilon_0} \h{u}_n } \ex
+        \e{V(x)=\frac{\sigma}{2\varepsilon_0}(x-x_0)} \ex   
+    Anello con carica uniforme (sull’asse)
+        \e{\h{E}(x)=\frac{\lambda R x}{2\varepsilon_0(x^2+R^2)^{3/2}} \h{u}_x} \ex
+        \e{V(x)=\frac{\lambda R}{2\varepsilon_0\sqrt{x^2+R^2}}} \ex
+
+\item [$\blacksquare$] \g{CONDUTTORI}
+    \it \g{Conduttori in equilibrio} \\
+    All’interno
+    \begin{itemize}
+        \item il campo è nullo \e{\h{E}=0} \ex
+        \item il potenziale è costante \e{\Delta V=0} \ex
+    \end{itemize}
+    Le cariche si distribuiscono sempre su superfici, mai all’interno
+    \it \g{Pressione elettrostatica}
+        \e{\h{p}=\frac{d\h{F}}{d\Sigma}=\frac{\sigma^2}{2\varepsilon_0}\h{u}_n=\frac{1}{2}\varepsilon_0 \h{E}^2} \ex
+    \it \g{Capacità}
+        \e{C=\frac{Q}{\Delta V}} \ex
+        Il più delle volte c'è induzione completa e C dipende dalla configurazione geometrica.
+    \it \g{Condensatori} \\
+    Piano
+        \e{C=\frac{\varepsilon_0 \Sigma}{d}} \ex
+    Sferico
+        \e{C=4\pi\varepsilon_0\frac{Rr}{R-r}} \ex
+    Cilindrico
+        \e{C=\frac{2\pi\varepsilon_0 h}{\ln \frac{R}{r}}} \ex
+    In serie 
+        \e{C_{eq}=\biggl( \sum_{i=1}^n \frac{1}{C_i} \biggr)^{-1}} \ex
+    In parallelo
+        \e{C_{eq}= \sum_{i=1}^n C_i} \ex
+    Con dielettrico
+        \e{C_{diel}=k_e C_0} \ex
+    Energia interna del condensatore
+        \e{U=\frac{Q^2}{2C}=\frac{1}{2}CV=\frac{1}{2}QV} \ex
+    Differenziale circuito RC
+        \e{RQ'(t)+\frac{Q(t)}{C}=V} \ex
+    Carica
+        \e{Q(t)=Q_0(1-e^{-\frac{t}{RC}})} \ex
+    Scarica
+        \e{Q(t)=Q_0 e^{-\frac{t}{RC}}} \ex
+    \it \g{Condensatore pieno} \\
+        Condensatore riempito di materiale di resistività $\rho$
+        \e{RC=\varepsilon_0\rho} \ex
+
+\item [$\blacksquare$] \g{DIPOLO ELETTRICO}
+    \it \g{Momento di dipolo}
+        \e{\h{p}=q \h{a}} \ex
+    \it \g{Potenziale del dipolo}
+        \e{V(r)=\frac{qa\cos{\theta}}{4\pi\varepsilon_0 r^2}=\frac{\h{p}\cdot\h{u}_r}{4\pi\varepsilon_0 r^2}} \ex
+    \it \g{Campo elettrico \g{E} generato}
+        \e{\mathbf{E}={\frac{q d\left(2\cos\left(\theta\right)\mathbf{u}_{r}+\sin\left(\theta\right)\mathbf{u}_{\theta}\right)}{4\pi\varepsilon r^{3}}}} \ex
+    \it \g{Momento torcente}
+        \e{\h{M}=\h{a}\times q\h{E}(x,y,z)} \ex
+        Se E uniforme
+        \e{\h{M}=\h{p}\times\h{E}} \ex
+    \it \g{Lavoro per ruotarlo} 
+        \e{W=\int_{\theta_{i}}^{\theta_{f}}M d\theta} \ex
+        Se E uniforme
+        \e{W=p E(\cos\theta_{i}-\cos(\theta_{f})} \ex
+    \it \g{Frequenza dipolo oscillante} \\
+        Se E costante e uniforme
+        \e{\nu=\frac{1}{2\pi}\sqrt{\frac{pE}{I}}} \ex
+    \it \g{Energia del dipolo}
+        \e{U=-\h{p}\cdot\h{E}} \ex
+    \it \g{Forza agente sul dipolo}
+        \e{\h{F}=\nabla(\h{p}\cdot\h{E})} \ex
+
+\item [$\blacksquare$] \g{DIELETTRICI}
+    \it \g{Campo elettrico in un dielettrico}
+        \e{\h{E}_k=\frac{\h{E}_0}{k}} \ex
+    \it \g{Vettore P polarizzazione}
+        \e{\h{P}=\frac{dp}{d\tau}} \ex
+    \it \g{Dielettrici lineari}
+        \e{\h{P}=\varepsilon_0\chi_E \h{E}_k=\varepsilon_0(k-1)\h{E}_k} \ex
+    \it \g{Dens. superficiale di q polarizzata}
+        \e{\sigma_p=\h{P}\cdot\h{u}_n=\frac{k-1}{k}\sigma_l} \ex
+    \it \g{Dens. volumetrica di q polarizzata}
+        \e{\rho_p=-\nabla\cdot\h{P}} \ex
+    \it \g{Spostamento elettrico}
+        \e{\h{D}=\varepsilon_0 \h{E}_k+\h{P}=\varepsilon_0 k \h{E}_k=\varepsilon_0 \h{E}_0} \ex
+
+\item [$\blacksquare$] \g{CORRENTI}
+    \it \g{Lavoro del generatore}
+        \e{W_{gen}=\int_{t_1}^{t_2} V dq(t)=2U_E} \ex
+    \it \g{Densità di corrente}
+        \e{\h{J}=nq\h{v}=\frac{Nq\h{v}}{\tau}} \ex
+    \it \g{Intensità di corrente}
+        \e{I=\frac{dq(t)}{dt}=\int_\Sigma \h{J}\cdot d\Sigma} \ex
+    \it \g{Leggi di Ohm}
+        \e{V=RI} \ex
+        \e{dR=\int_\Gamma\frac{\rho}{\Sigma}dl} \ex
+        \e{\h{E}=\rho\h{J}} \ex
+        \e{\rho=\frac{1}{\sigma}} \ex
+    \it \g{Potenza conduttore ohmico}
+        \e{P=VI=RI^2=\frac{V^2}{R}} \ex
+        \e{dP=\h{J}(\h{r})\cdot\h{E}(\h{r})d\tau} \ex
+    \it \g{Resistori} \\
+        In serie
+        \e{R_{eq}= \sum_{i=1}^n R_i} \ex
+        In parallelo
+        \e{R_{eq}=\biggl( \sum_{i=1}^n \frac{1}{R_i} \biggr)^{-1}} \ex
+    \it \g{Generatore reale} \\
+        \e{\Delta V=V_0-r_i I}\ex
+
+\item [$\blacksquare$] \g{MAGNETOSTATICA}
+    \it \g{Forza di Lorentz}
+        \e{\h{F}=q\h{v}\times\h{B}}\ex
+    \it \g{Prima legge di Laplace}
+        \e{\h{B}(\h{r})=\frac{\mu_0 I}{4\pi}\oint\frac{d\h{s}\times\h{u}_r}{r^2}} \ex
+        \e{\h{B}(\h{r})=\frac{\mu_0}{4\pi}\int\frac{\h{J}\times\h{u}_r}{r^2} d\tau} \ex
+        \e{\h{B}(\h{r})=\nabla_r\times\biggl(\frac{\mu_0}{4\pi}\int\frac{\h{J}}{r}d\tau\biggr)} \ex
+    \it \g{Seconda legge di Laplace}
+        \e{\h{F}=\int I(d\h{s}\times d\h{B})} \ex
+    \it \g{B di corpi notevoli} (viene indicata la direzione, il verso dipende dalla corrente I) \\
+        Asse di una spira
+        \e{\h{B}(z)=\frac{\mu_0Ir^2}{2(z^2+r^2)^(3/2)}\h{u}_z} \ex
+        Filo indefinito
+        \e{\h{B}(r)=\frac{\mu_0I}{2\pi r}\h{u}_\phi} \ex
+        Asse filo lungo 2a
+        \e{\h{B}(r)=\frac{\mu_0Ia}{2\pi r \sqrt{r^2+a^2}}\h{u}_\phi} \ex
+        Toroide
+        \e{\h{B}(r)=\frac{\mu_0NI}{2\pi r}\h{u}_\phi} \ex
+        Piano infinito su xy, con K $\h{u}_{x}$ densità lineare di corrente
+        \e{\h{B}=\frac{\mu_0 \h{K}}{2}\h{u}_y} \ex
+    \it \g{Effetto Hall} \\
+        b spessore sonda, b // B, b $\perp$ I, n car/vol
+        \e{V_H=\frac{IB}{n|q|b}} \ex
+    \it \g{Forza di Ampere} \\
+        Corr. equiversa = for. attrattiva 
+        \e{F = \frac{\mu_0}{2\pi} \frac{I_1 I_2 L}{d}}\ex
+    \it \g{Moto ciclotrone} \\
+        Raggio
+        \e{R = \frac{mv}{qB}}\ex 
+        Periodo 
+        \e{T = \frac{2\pi m}{qB}}\ex 
+        Angolo deflessione elica ($v$ 2 dimensioni) 
+        \e{\sin(\theta) = \frac{qBR}{mv}}\ex 
+        Passo elica 
+        \e{d=\frac{2\pi R}{\tan(\theta)}} \ex
+
+\item [$\blacksquare$] \g{INDUZIONE}
+    \it \g{Coefficienti mutua induzione}
+        \e{\Phi_{1,2}=MI_1 \qquad \Phi_{2,1}MI_2} \ex
+    \it \g{Flusso generato da 1 attraverso 2} 
+        \e{\Phi_{1,2}=NB_1\Sigma_2} \ex
+    \it \g{Induttanza}\\
+        $\Phi$ autoflusso
+        \e{\Phi(\h{B})=IL} \ex
+        Toroide 
+        \e{L = \frac{\mu_0 N^2 \pi a}{2\pi} \ln\left(\frac{R+b}{R}\right)}\ex
+    \it \g{Fem autoindotta}
+        \e{\Phi=-L\frac{\mathrm{d}I}{\mathrm{d}t}} \ex
+    \it \g{Fem indotta}
+        \e{\varepsilon=-\frac{\mathrm{d}\Phi(\h{B})}{\mathrm{d}t}}=-L\frac{\mathrm{d}I}{\mathrm{d}t} \ex
+    \it \g{Corrente indotta}
+        \e{I=\frac{\varepsilon_i}{R}=-\frac{\mathrm{d}\Phi(\h{B})}{R\mathrm{d}t}} \ex
+    \it \g{Energia dell'induttanza} \\
+        Mutua (solo una volta ogni coppia):
+        \e{U_{1,2}=\frac{1}{2}MI_1I_2+\frac{1}{2}MI_2I_1}\ex
+        Interna
+        \e{U_L=\frac{1}{2}LI^2} \ex
+        In un circuito (conta una volta ogni induttanza ed una ogni coppia)
+        \e{U=\frac{1}{2}\sum_{i=1}^N(L_iI_i^2+\sum_{j=1}^N M_{i,j}I_iI_j) \qquad i\neq j} \ex
+    \it \g{Legge di Felici}
+        \e{Q(t)=\frac{\Phi(0)-\Phi(t)}{R}} \ex
+
+\item [$\blacksquare$] \g{DIPOLO MAGNETICO}
+    \it \g{Momento di dipolo}
+        \e{\mathrm{d}\h{m}=I\mathrm{d}\Sigma\h{u}_n} \ex
+    \it \g{Momento di forze}
+        \e{\h{M}=\h{m}\times\h{B}} \ex
+    \it \g{Forza agente}
+        \e{\h{F}=\nabla(\h{m}\cdot\h{B})} \ex
+    \it \g{Energia potenziale}
+        \e{U=-\h{m}\cdot\h{B}} \ex
+
+\item [$\blacksquare$] \g{MAGNETISMO}
+    
+
+
+
+
+        
+
+        
+        
+
+
+    
+        
+    
+        
+
+        
+
+        
+
+
+\end{itemize}
+
+\end{multicols*}
+\end{document}
