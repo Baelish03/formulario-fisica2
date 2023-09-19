@@ -1,6 +1,7 @@
 \documentclass{book}
 
 \usepackage{multicol} 
+\usepackage{multirow}
 \usepackage{geometry}
 \usepackage{blindtext}
 \usepackage[fleqn]{amsmath}
@@ -8,12 +9,15 @@
 \usepackage{wasysym}
 \usepackage[utf8]{inputenc}
 \usepackage[italian]{babel}
-\usepackage{tipa}
+\usepackage{amsfonts}
+\usepackage{multirow}
 
 \geometry{a3paper, top=0.5cm, bottom=0.5cm, left=0.5cm, right=0.5cm} %, heightrounded, bindingoffset=5mm} %impostare i margini
 \everymath{\displaystyle} %impostare il displaystyle su tutto il doc
 \setlength\parindent{0pt} %rimuovere indentazione ogni volta che si va a capo
 \setlength\mathindent{0pt}
+\setlength{\columnsep}{0pt}
+
 
 \newcommand{\g}{\textbf}
 \newcommand{\h}{\mathbf}
@@ -22,18 +26,18 @@
 \renewcommand{\it}{\item[$\cdot$]}
 
 \begin{document}
-\begin{multicols*}{4}
+\begin{multicols}{4}
 \begin{itemize}
 
 \item [$\blacksquare$] \g{FONDAMENTALI}
     \it \g{Teorema (divergenza)}
-        \e{\int_\Sigma \h{F} \cdot d \h{\Sigma}= \int_\tau \nabla \cdot \h{F} d\tau} \ex
+        \e{\int_\Sigma \h{F} \cdot \mathrm{d} \h{\Sigma}= \int_\tau \nabla \cdot \h{F} \mathrm{d}\tau} \ex
     \it \g{Teorema (Stokes)}
-        \e{\oint_\gamma\h{F}\cdot d\h{s}=\int_\Sigma \nabla \times \h{F} d\h{\Sigma}} \ex
+        \e{\oint_\gamma\h{F}\cdot \mathrm{d}\h{s}=\int_\Sigma \nabla \times \h{F} \mathrm{d}\h{\Sigma}} \ex
     \it \g{Teorema (Gradiente)}
-        \e{\phi_2-\phi_1=\int_\gamma\nabla\phi\cdot d\h{s} }\ex
+        \e{\phi_2-\phi_1=\int_\gamma\nabla\phi\cdot \mathrm{d}\h{s} }\ex
     \it \g{Flusso di un campo}
-        \e{ \Phi_\Sigma(\h{E})=\oint_\Sigma \h{E}\cdot d\h{\Sigma}   
+        \e{ \Phi_\Sigma(\h{E})=\oint_\Sigma \h{E}\cdot \mathrm{d}\h{\Sigma}   
         } \ex
     \it \g{Equazioni di Maxwell} \\
         Nel vuoto:
@@ -41,15 +45,15 @@
         \e{\nabla\times\h{E}=-\frac{\partial \h{B}}{\partial t}} \ex
         \e{\nabla\cdot\h{B}}=0\ex
         \e{\nabla\times\h{B}=\mu_0\h{J}+\mu_0\varepsilon_0\frac{\partial \h{E}}{\partial t}} \ex
-        \e{\oint_\Sigma\h{E}\cdot d\h{\Sigma}=\frac{Q_{int}}{\varepsilon_0}} \ex
-        \e{\oint_\Gamma\h{E}\cdot d\h{s}=-\frac{d \Phi(\h{B})}{dt}} \ex
-        \e{\oint_\Sigma\h{B}\cdot d\h{\Sigma}=0} \ex
-        \e{\oint_\Gamma\h{B}\cdot d\h{s}=\mu_0 I_{conc} +\mu_0\varepsilon_0\frac{d \Phi_E}{d t}} \ex
+        \e{\oint_\Sigma\h{E}\cdot \mathrm{d}\h{\Sigma}=\frac{Q_{int}}{\varepsilon_0}} \ex
+        \e{\oint_\Gamma\h{E}\cdot \mathrm{d}\h{s}=-\frac{\mathrm{d} \Phi(\h{B})}{\mathrm{d}t}} \ex
+        \e{\oint_\Sigma\h{B}\cdot \mathrm{d}\h{\Sigma}=0} \ex
+        \e{\oint_\Gamma\h{B}\cdot \mathrm{d}\h{s}=\mu_0 I_{conc} +\mu_0\varepsilon_0\frac{d \Phi_E}{d t}} \ex
         Nei mezzi:
         \e{\nabla\cdot\h{D}=\rho_{libere}}\ex
         \e{\nabla\times\h{H}=\h{J}_{C,lib}+\frac{\partial\h{D}}{\partial t}} \ex
-        \e{\oint_\Sigma\h{D}\cdot d\h{\Sigma}=Q_{int,lib}} \ex
-        \e{\oint_\Gamma\h{H}\cdot d\h{s}=I_{conc,lib} + \frac{d \Phi_D}{d t}} \ex
+        \e{\oint_\Sigma\h{D}\cdot \mathrm{d}\h{\Sigma}=Q_{int,lib}} \ex
+        \e{\oint_\Gamma\h{H}\cdot \mathrm{d}\h{s}=I_{conc,lib} + \frac{d \Phi_D}{d t}} \ex
 
 \item [$\blacksquare$] \g{ELETTROSTATICA}
     \it \g{Forza di Coulomb}
@@ -60,11 +64,11 @@
         \e{U=\frac{q_1q_2}{4\pi\varepsilon_0r_{1,2}}+c} \ex
     \it \g{Potenziale scalare V}
         \e{V(\h{r})=\frac{U(\h{r})}{q_0}} \ex
-        \e{V(B)-V(A)=-\int_A^B\h{E}\cdot d \h{r}} \ex
+        \e{V(B)-V(A)=-\int_A^B\h{E}\cdot \mathrm{d} \h{r}} \ex
         \e{\h{E}=-\nabla V} \ex
     \it \g{Energia di E}
-        \e{U=\frac{1}{2} \int_{\mathbb{R}^3} \rho(\h{r}) V(\h{r}) d\tau} \ex
-        \e{U=\frac{1}{2}\varepsilon_0\int_{\mathbb{R}^3}\h{E}^2 d\tau} \ex
+        \e{U=\frac{1}{2} \int_{\mathbb{R}^3} \rho(\h{r}) V(\h{r}) \mathrm{d}\tau} \ex
+        \e{U=\frac{1}{2}\varepsilon_0\int_{\mathbb{R}^3}\h{E}^2 \mathrm{d}\tau} \ex
     \it \g{E e V di particolari distribuzioni}
     Carica puntiforme 
         \e{\h{E}=\frac{q}{4\pi\varepsilon_0 r^2}\h{u}_{r}} \ex
@@ -136,7 +140,7 @@
         Se E uniforme
         \e{\h{M}=\h{p}\times\h{E}} \ex
     \it \g{Lavoro per ruotarlo} 
-        \e{W=\int_{\theta_{i}}^{\theta_{f}}M d\theta} \ex
+        \e{W=\int_{\theta_{i}}^{\theta_{f}}M \mathrm{d}\theta} \ex
         Se E uniforme
         \e{W=p E(\cos\theta_{i}-\cos(\theta_{f})} \ex
     \it \g{Frequenza dipolo oscillante} \\
@@ -163,19 +167,19 @@
 
 \item [$\blacksquare$] \g{CORRENTI}
     \it \g{Lavoro del generatore}
-        \e{W_{gen}=\int_{t_1}^{t_2} V dq(t)=2U_E} \ex
+        \e{W_{gen}=\int_{t_1}^{t_2} V \mathrm{d}q(t)=2U_E} \ex
     \it \g{Densità di corrente}
         \e{\h{J}=nq\h{v}=\frac{Nq\h{v}}{\tau}} \ex
     \it \g{Intensità di corrente}
-        \e{I=\frac{dq(t)}{dt}=\int_\Sigma \h{J}\cdot d\Sigma} \ex
+        \e{I=\frac{\mathrm{d} q(t)}{\mathrm{d} t}=\int_\Sigma \h{J}\cdot \mathrm{d}\Sigma} \ex
     \it \g{Leggi di Ohm}
         \e{V=RI} \ex
-        \e{dR=\int_\Gamma\frac{\rho}{\Sigma}dl} \ex
+        \e{\mathrm{d}R=\int_\Gamma\frac{\rho}{\Sigma}\mathrm{d}l} \ex
         \e{\h{E}=\rho\h{J}} \ex
         \e{\rho=\frac{1}{\sigma}} \ex
     \it \g{Potenza conduttore ohmico}
         \e{P=VI=RI^2=\frac{V^2}{R}} \ex
-        \e{dP=\h{J}(\h{r})\cdot\h{E}(\h{r})d\tau} \ex
+        \e{\mathrm{d}P=\h{J}(\h{r})\cdot\h{E}(\h{r})\mathrm{d}\tau} \ex
     \it \g{Resistori} \\
         In serie
         \e{R_{eq}= \sum_{i=1}^n R_i} \ex
@@ -188,11 +192,11 @@
     \it \g{Forza di Lorentz}
         \e{\h{F}=q\h{v}\times\h{B}}\ex
     \it \g{Prima legge di Laplace}
-        \e{\h{B}(\h{r})=\frac{\mu_0 I}{4\pi}\oint\frac{d\h{s}\times\h{u}_r}{r^2}} \ex
-        \e{\h{B}(\h{r})=\frac{\mu_0}{4\pi}\int\frac{\h{J}\times\h{u}_r}{r^2} d\tau} \ex
-        \e{\h{B}(\h{r})=\nabla_r\times\biggl(\frac{\mu_0}{4\pi}\int\frac{\h{J}}{r}d\tau\biggr)} \ex
+        \e{\h{B}(\h{r})=\frac{\mu_0 I}{4\pi}\oint\frac{\mathrm{d}\h{s}\times\h{u}_r}{r^2}} \ex
+        \e{\h{B}(\h{r})=\frac{\mu_0}{4\pi}\int\frac{\h{J}\times\h{u}_r}{r^2} \mathrm{d}\tau} \ex
+        \e{\h{B}(\h{r})=\nabla_r\times\biggl(\frac{\mu_0}{4\pi}\int\frac{\h{J}}{r}\mathrm{d}\tau\biggr)} \ex
     \it \g{Seconda legge di Laplace}
-        \e{\h{F}=\int I(d\h{s}\times d\h{B})} \ex
+        \e{\h{F}=\int I(\mathrm{d}\h{s}\times \mathrm{d}\h{B})} \ex
     \it \g{B di corpi notevoli} (viene indicata la direzione, il verso dipende dalla corrente I) \\
         Asse di una spira
         \e{\h{B}(z)=\frac{\mu_0Ir^2}{2(z^2+r^2)^(3/2)}\h{u}_z} \ex
@@ -391,32 +395,190 @@
     Superficie RIFLETTENTE
     \e{p=\frac{I_i+I_t+I_r}{v}} \ex
     \it \g{Rapporto di polarizzazione}
-    \e{\Beta_R=\frac{P_R^\sigma-P_R^\pi}{P_R^\sigma+P_R^\pi}} \ex
-    \e{\Beta_T=\frac{P_T^\sigma-P_T^\pi}{P_T^\sigma+P_T^\pi}} \ex
+    \e{\beta_R=\frac{P_R^\sigma-P_R^\pi}{P_R^\sigma+P_R^\pi}} \ex
+    \e{\beta_T=\frac{P_T^\sigma-P_T^\pi}{P_T^\sigma+P_T^\pi}} \ex
     
-\item [$\blacksquare$] \g{INTERFERENZA e DIFFRAZIONE}   
-    \it \g{Interferenza generica}
-    \e{}
-
-
-
-
-
-
-        
-
-
-    
-        
-    
-        
-
-        
-
-        
-
-
+\item [$\blacksquare$] \g{INTERFERENZA e DIFFRAZIONE}  \\  
+    \it \g{Interferenza generica} \\
+    Onda risultante
+    \e{f(\h{r},t)=Ae^{i(kr_1-\omega t+\alpha)}} \ex
+    Ampiezza
+    \e{A=\sqrt{A_1^2+A_2^2+2A_1A_2\cos\delta}} \ex
+    Diff. cammino ottico
+    \e{\delta=\alpha_2-\alpha_1=(\Phi_2-\Phi_1+k(r_2-r_1)} \ex
+    Intensità
+    \e{I=I_1+I_2+2\sqrt{I_1I_2}\cos{\delta}} \ex
+    Fase risultante $\alpha$
+    \e{\tan\alpha=\frac{A_1\sin{\alpha_1}+A_2\sin{\alpha_2}}{A_1\cos{\alpha_1}+A_2\cos{\alpha_2}}} \ex
+    Massimi
+    \e{\delta=2n\pi} \ex
+    Minimi
+    \e{\delta=(2n+1)\pi } \ex
+    \it \g{Condizione di Fraunhofer} \\
+    \e{\theta=\frac{\Delta y}{L}} \ex
+    L grande tale che $\tan\theta\approx\theta$     
+    \it \g{Interferenza in fase} \\
+    Diff. cammino ottico
+    \e{\delta=k(r_2-r_1)=\frac{2\pi}{\lambda}d\sin{\theta}} \ex
+    Costruttiva
+    \e{r_2-r_1=n\lambda \rightarrow \sin{\theta}=n\frac{\lambda}{d} \quad n\in\mathbb{Z}} \ex
+    Distruttiva
+    \e{r_2-r_1=\frac{2n+1}{2}\lambda \rightarrow \sin{\theta}=\frac{2n+1}{2}\frac{\lambda}{d} \quad n\in\mathbb{Z}} \ex
+    \it \g{Interferenza N fenditure} \\
+    Diff. cammino ottico
+    \e{\delta=\frac{2\pi}{\lambda}d\sin{\theta}} \ex
+    Intensità
+    \e{I(\theta)=I_0\biggl(\frac{\sin(N\frac{\delta}{2})}{\sin\frac{\delta}{2}}\biggr)^2} \ex
+    Massimi principali $m\in\mathbb{Z}$
+    \e{\delta=2m\pi \rightarrow \sin\theta=\frac{m\lambda}{d}} \ex
+    \e{I_{MAX}=N^2I_0} \ex
+    Massimi secondari \\
+    $m\in\mathbb{Z}-\{kN,kN-1$ con $k\in\mathbb{Z}\}$
+    \e{\delta=\frac{2m+1}{2N}\pi \rightarrow \sin\theta=\frac{2m+1}{2N}\frac{\lambda}{d}} \ex
+    \e{I_{SEC}=\frac{I_0}{\bigl(\sin\frac{\pi d \sin\theta}{\lambda} \bigr)^2}} \ex
+    Minimi $m\in\mathbb{Z}-\{kN\}$
+    \e{\delta=\frac{2m}{N}\pi \rightarrow \sin\theta=\frac{m\lambda}{Nd}} \ex
+    \e{I_{MIN}=0}\ex
+    \it \g{Diffrazione} \\
+    Intensità
+    \e{I(\theta)=I_{0}\biggl(\frac{\sin(\frac{\pi a \sin\theta}{\lambda})}{\frac{\pi a \sin\theta}{\lambda}} \biggr)^2} \ex
+    Massimo pincipale in $\theta=0$ \\
+    \e{I_{MAX}=I_0} \ex
+    Massimi secondari $m\in\mathbb{Z}-\{-1,0\}$
+    \e{\sin\theta=\frac{2m+1}{2}\frac{\lambda}{a}} \ex
+    \e{I_{SEC}=\frac{I_0}{\bigl( \frac{\pi(2m+1)}{2} \bigr)^2}} \ex
+    Minimi $m\in\mathbb{Z}-\{0\}$
+    \e{\sin\theta=\frac{m\lambda}{a}}\ex
+    \e{I_{MIN}=0}\ex
+    \it \g{Reticolo di diffrazione} \\
+    Sovrapposizione di diffrazione e interferenza, l'intensità è il prodotto dei due effetti \\
+    \e{I(\theta)=I_0 \biggl( \frac{\sin(\frac{\pi a \sin\theta}{\lambda})}{\frac{\pi a \sin\theta}{\lambda}} 
+    \frac{\sin(\frac{N\pi d \sin\theta}{\lambda})}{\sin(\frac{\pi d \sin\theta}{\lambda})}   \biggr)^2}\ex
+    Dispersione
+    \e{D=\frac{\mathrm{d}\theta}{\mathrm{d}\lambda}=\frac{m}{d\cos\theta_m}}\ex
+    \it \g{Fattore molt. di inclinazione}
+    \e{f(\theta)=\frac{1+\cos{\theta}}{2}}\ex
 \end{itemize}
+\end{multicols}
 
-\end{multicols*}
+\hline
+
+\begin{multicols}{4}
+\begin{itemize}
+\item [$\blacksquare$] \g{UNITÀ DI MISURA}  
+    \e{H=\frac{Wb}{A}=Tm^2=\frac{m^2kg}{A^2s^2}} \ex
+    \e{\Omega=\frac{V}{A}=\frac{V^2}{W}=\frac{m^2kg}{A^2s^3}} \ex
+    \e{T=\frac{N}{Am}=\frac{kg}{As^2}} \ex
+    \e{V=\frac{J}{C}=\frac{W}{A}=\frac{m^2kg}{s^3A}}\ex
+    \e{F=\frac{C}{V}=\frac{C^2}{J}=\frac{A^2s^4}{m^2kg}}\ex
+
+\item [$\blacksquare$] \g{FISICA 1}
+    \it \g{Momento torcente}
+    \e{M=\h{r}\times\h{F}=I\alpha}\ex
+    \it \g{Lavoro}
+    \e{F=\nabla W=-\nabla U}\ex
+    \it \g{Moto circolare unif. accelerato}
+    \e{v=\omega r}\ex
+    \e{a=\frac{v^2}{r}=\omega^2r}\ex
+    \e{\theta(t)=\theta(0)+\omega(0)t+\frac{1}{2}\alpha t^2}\ex
+    \it \g{Moto armonico}\\
+    Equazione differenziale
+    \e{x''+\omega^2x=0}\ex
+    Soluzione
+    \e{x(t)=A\sin(\omega t+\varphi)} \ex
+    \it \g{Attrito viscoso} \\
+    Equazione differenziale
+    \e{v'+\frac{v}{\tau}=K}\ex
+    Soluzione
+    \e{v(t)=k\tau(1-e^{-\frac{t}{\tau}})}\ex
+
+\item [$\blacksquare$] \g{ANALISI MATEMATICA}
+    \it \g{Integrali ricorrenti}
+    \e{\int\frac{1}{x^2+r^2}\mathrm{d}x=\frac{1}{r}\arctan\frac{x}{r}}\ex
+    \e{\int\frac{1}{\sqrt{x^2+r^2}}\mathrm{d}x=\ln{\sqrt{x^2+r^2}+x}}\ex
+    \e{\int\frac{1}{(x^2+r^2)^{3/2}}\mathrm{d}x=\frac{x}{r^2\sqrt{r^2+x^2}}}\ex
+    \e{\int\frac{x}{\sqrt{x^2+r^2}}\mathrm{d}x=\sqrt{r^2+x^2}}\ex
+    \e{\int\frac{x}{(x^2+r^2)^{3/2}}\mathrm{d}x=-\frac{1}{\sqrt{r^2+x^2}}}\ex
+    \e{\int\frac{1}{\cos{x}}\mathrm{d}x=\log\biggl(\frac{1+\sin{x}}{\cos{x}} \biggr)}\ex
+    \e{\int\sin^3{ax}\mathrm{d}x=-\frac{3a\cos{ax}}{4a}+\frac{\cos{3ax}}{12}}\ex
+    \it \g{Differenziale di primo ordine}\\
+    Forma generale
+    \e{y'(t)+a(t)y(t)=b(t)}\ex
+    Soluzione
+    \e{y(t)=e^{-A(t)(c+\int b(t)e^{A(t)}\mathrm{d}t)}}\ex
+    \it \g{Differenziale di secondo ordine omogeneo}\\
+    Forma generale
+    \e{y''+ay'+by=0 \qquad a,b\in\mathbb{R}}\ex
+    $\lambda_{1,2}\in\mathbb{C}$ sono le soluzioni dell'equazione associata \\
+    Soluzioni \\
+        Se $\Delta>0$
+        \e{y(t)=c_1e^{\lambda_1t}+c_2e^{\lambda_2t}}\ex
+        Se $\Delta=0$
+        \e{y(t)=c_1e^{\lambda_1t}+tc_2e^{\lambda_2t}}\ex
+        Se $\Delta<0$
+        \e{y(t)=c_1e^{\alpha t}\cos(\beta t)+c_2e^{\alpha t}\sin(\beta t)}\ex
+        con $\alpha=Re(\lambda)$ e $\beta=Im(\lambda)$ \\
+    \it \g{Identità vettoriali}
+    \e{\nabla\cdot(\nabla\times \h{A})=0}\ex
+    \e{\nabla\times(\nabla f)=0}\ex
+    \e{\nabla\cdot(f\h{A}=f\nabla\cdot\h{A}+\h{A}\cdot\nabla f}\ex
+    \e{\nabla(\h{A}\cdot\h{B})=\h{B}\cdot(\nabla\times\h{A})-\h{A}\cdot(\nabla\times\h{B})}\ex
+    \e{\nabla\times(\nabla\times\h{A})=\nabla(\nabla\cdot\h{A})-\nabla^2\h{A}}\ex
+    \e{\h{A}\times(\h{B}\times\h{C})=\h{B}(\h{A}\cdot\h{C})-\h{C}(\h{A}\cdot\h{B})} \ex
+    \it \g{Identità geometriche}
+    \e{\sin(\alpha\pm\beta)=\sin\alpha\cos\beta\pm\cos\alpha\sin\beta}\ex
+    \e{\cos(\alpha\pm\beta)=\cos\alpha\cos\beta\mp\sin\alpha\sin\beta}\ex
+    \e{\cos\frac{\alpha}{2}=\pm\sqrt{\frac{1+\cos\alpha}{2}}}\ex
+    \e{\sin\frac{\alpha}{2}=\pm\sqrt{\frac{1-\cos\alpha}{2}}}\ex
+    \e{\tan\frac{\alpha}{2}=\frac{1-\cos\alpha}{\sin\alpha}=\frac{\sin\alpha}{1+\cos\alpha}}\ex
+\end{itemize}
+\end{multicols}
+
+\centering
+\begin{tabular}{|c|c|c|c|}
+    \hline
+                & Cartesiane & Sferiche & Cilindriche   \\ 
+    \hline 
+    & & & \\
+    Gradiente $(\nabla f=)$ 
+    &  $\frac{\partial f}{\partial x}\h{x}+\frac{\partial f}{\partial y}\h{y}+\frac{\partial f}{\partial z}\h{z}$ 
+    & $\frac{\partial f}{\partial r}\h{r}+\frac{1}{r}\frac{\partial f}{\partial \theta}\h{\theta}+\frac{1}{r\sin\theta}\frac{\partial f}{\partial \phi}\h{\phi}$ 
+    & $\frac{\partial f}{\partial r}\h{r}+\frac{1}{r}\frac{\partial f}{\partial \theta}\h{\theta}+\frac{\partial f}{\partial z}\h{z}$ \\
+    & & & \\
+    \hline 
+    & & & \\
+    Divergenza $(\nabla\cdot\h{F}=)$ 
+    & $\frac{\partial F_x}{\partial x}+\frac{\partial F_y}{\partial y}+\frac{\partial F_z}{\partial z}$ 
+    & $\frac{1}{r^2}\frac{\partial r^2 F_r}{\partial r}+\frac{1}{r\sin\theta}\frac{\partial F_\theta\sin\theta}{\partial \theta}+\frac{1}{r\sin\theta}\frac{\partial F_\phi}{\partial \phi}$ 
+    & $\frac{1}{r}\frac{\partial F_r}{\partial r}+\frac{1}{r}\frac{\partial F_\theta}{\partial \theta}+\frac{\partial F_z}{\partial z}$ \\
+    & & & \\
+    \hline
+    & & & \\
+    
+    {Rotore $(\nabla\times\h{F}=)$ }
+    & {$\left( \begin{array}{c}
+         \frac{\partial F_z}{\partial y}-\frac{\partial F_y}{\partial z} \\ \\
+         \frac{\partial F_x}{\partial z}-\frac{\partial F_z}{\partial x} \\ \\
+         \frac{\partial F_y}{\partial x}-\frac{\partial F_x}{\partial y} \\      
+    \end{array} \right) $}
+    & {$\left(\begin{array}{c}
+        \frac{1}{r \sin \theta} \biggl(\frac{\partial F_\phi \sin\theta}{\partial \theta}-\frac{\partial F_\theta}{\partial \phi}\biggr) \\ \\
+        \frac{1}{r}\biggl(\frac{1}{\sin\theta}\frac{\partial F_r}{\partial \phi}-\frac{\partial (r F_\phi)}{\partial r} \biggr) \\ \\
+        \frac{1}{r}\biggl(\frac{\partial (r F_\theta)}{\partial r}-\frac{\partial F_r}{\partial \theta}\biggr) \\        
+    \end{array}\right) $}
+    & {$\left(\begin{array}{c}
+        \biggl(\frac{1}{r}\frac{\partial F_z}{\partial \phi}-\frac{\partial F_\phi}{\partial z}\biggr) \\ \\
+        \biggl(\frac{\partial F_r}{\partial z}-\frac{\partial (r F_z)}{\partial r} \biggr) \\ \\
+        \frac{1}{r}\biggl(\frac{\partial (r F_\phi)}{\partial r}-\frac{\partial F_r}{\partial \phi}\biggr) \\        
+    \end{array}\right) $} \\
+    & & & \\ \hline
+    \multicolumn{4}{|c|}{Il laplaciano di un campo scalare $\Phi$, in qualunque coordinata, è $\nabla\cdot\nabla\Phi$} \\
+    \hline
+\end{tabular}
+
+
+
+
+
+
 \end{document}
