@@ -9,3 +9,4 @@ Per sapere se l'ultima modifica suggerita è già stata apportata, qui ci sarà 
 2) <b>Lavoro per ruotare un dipolo con E costante</b> (75) "Aggiunta una ) e sostituite le tonde con le quadre
 3) <b>B lungo l'asse di una spira</b> (106) "3/2 all'esponente"
 4) <b>Corrente in un circuito RL in DC</b> (135) "Sostituito ε_0 con V_0 per non confondere la f.e.m. con la costante dielettrica nel vuoto" 
+5) <b>Aggiunta recapito mail istituzionale</b>
