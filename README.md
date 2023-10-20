@@ -10,3 +10,5 @@ Per sapere se l'ultima modifica suggerita è già stata apportata, qui ci sarà 
 3) <b>B lungo l'asse di una spira</b> (106) "3/2 all'esponente"
 4) <b>Corrente in un circuito RL in DC</b> (135) "Sostituito ε_0 con V_0 per non confondere la f.e.m. con la costante dielettrica nel vuoto" 
 5) <b>Aggiunta recapito mail istituzionale</b>
+6) <b>Campo di una sfera carica uniformemente</b> (36) "3 al denominatore"
+7) <b>Equazioni a sistema</b> (36,37,38,39,50,51) "Migliorata la visualizzazione delle formule nei sistemi"

@@ -32,7 +32,7 @@
 \begin{center}
     FORMULARIO DI FISICA 2 \\
 \end{center}
-Per segnalare errori scrivimi alla mail emanuele.urso@studenti.unipd.it oppure correggi tu stesso usando il file sorgente in LaTe$\chi$ su GitHub cercando Baelish. \textbf{Buona fortuna con l'esame!} \\
+Per segnalare errori scrivimi alla mail emanuele.urso@studenti.unipd.it oppure correggi tu stesso usando il file sorgente in LaTe$\chi$ su GitHub cercando Baelish. \textbf{Buona fortuna per l'esame!} \\
 \hline
 
 \begin{multicols}{4}
@@ -102,19 +102,23 @@ MATRICOLA: \\
         \e{\h{E}=\frac{q}{4\pi\varepsilon_0 r^2}\h{u}_{r}} \ex
         \e{V=\frac{q}{4\pi\varepsilon_0 r}} \ex
     Sfera carica uniformemente
-        \e{ \h{E}(r)=\begin{cases} 
-        \frac{Qr}{4\pi\varepsilon_0 R^3}=\frac{3 \rho r}{\varepsilon_0} \quad \mathrm{\ se\ r<R}\\
-        \frac{Q}{4\pi\varepsilon_0 R^2} \quad \ \ \ \ \ \ \ \ \mathrm{\ se\ r\geq R}\end{cases} } \ex
-        \e{ V(r)=\begin{cases} 
-        \frac{\rho (3R^2-r^2)}{6\varepsilon_0 } \quad \ \ \ \ \mathrm{\ se\ r<R}\\
-        \frac{Q}{4\pi\varepsilon_0 r} \qquad \ \ \ \ \ \ \ \mathrm{\ se\ r\geq R}\end{cases} } \ex
+        \e{ \h{E}(r)=\begin{cases} \begin{aligned}
+        \frac{Qr}{4\pi\varepsilon_0 R^3}=\frac{\rho r}{3 \varepsilon_0} \ \mathrm{\ se\ r<R}\\
+        \frac{Q}{4\pi\varepsilon_0 R^2} \quad \ \ \ \ \ \ \mathrm{\ se\ r\geq R}
+        \end{aligned}  \end{cases} } \ex
+        \e{ V(r)=\begin{cases} \begin{aligned} 
+        \frac{\rho (3R^2-r^2)}{6\varepsilon_0 } \ \mathrm{\ se\ r<R}\\ 
+        \frac{Q}{4\pi\varepsilon_0 r} \qquad  \ \ \mathrm{\ se\ r\geq R}
+        \end{aligned} \end{cases}  } \ex
     Guscio sferico carico uniformemente
-        \e{ \h{E}(r)=\begin{cases} 
+        \e{ \h{E}(r)=\begin{cases}  \begin{aligned}
         0 \qquad \qquad \ \ \mathrm{\ se\ r<R}\\
-        \frac{Q}{4\pi\varepsilon_0 R^2} \ \ \ \ \ \ \ \mathrm{\ se\ r\geq R}\end{cases} } \ex
-        \e{ V(r)=\begin{cases} 
+        \frac{Q}{4\pi\varepsilon_0 R^2} \ \ \ \ \ \ \ \mathrm{\ se\ r\geq R}
+        \end{aligned} \end{cases} } \ex
+        \e{ V(r)=\begin{cases} \begin{aligned} 
         \frac{Q}{4\pi\varepsilon_0 R} \ \ \ \ \ \ \ \mathrm{\ se\ r<R}\\
-        \frac{Q}{4\pi\varepsilon_0 r} \ \ \ \ \ \ \ \mathrm{\ se\ r\geq R}\end{cases} } \ex
+        \frac{Q}{4\pi\varepsilon_0 r} \ \ \ \ \ \ \ \mathrm{\ se\ r\geq R}
+        \end{aligned} \end{cases} } \ex
     Filo infinito con carica uniforme $\lambda$
         \e{\h{E}(r)=\frac{\lambda}{2\pi\varepsilon_0 r} \h{u}_r} \ex
         \e{V(r)=\frac{\lambda}{2\pi\varepsilon} \ln \biggl(\frac{r_0}{r}\biggr)} \ex
@@ -131,12 +135,14 @@ MATRICOLA: \\
         \e{\h{E}(x)=\frac{\sigma}{2\varepsilon_0}\frac{R^2}{x^2}\h{u}_x}\ex
         \e{V(x)=\frac{\sigma}{4\varepsilon_0}\frac{R^2}{x}} \ex
     Guscio cilindrico uniformemente carico
-        \e{ \h{E}(r)=\begin{cases} 
+        \e{ \h{E}(r)=\begin{cases} \begin{aligned}
         0 \qquad \qquad \ \ \mathrm{\ se\ r<R}\\
-        \frac{Q}{2\pi\varepsilon_0 h r} \ \ \ \ \ \ \ \mathrm{\ se\ r\geq R}\end{cases} } \ex
-        \e{ V(r)=\begin{cases} 
-        0 \qquad \qquad \ \ \ \ \ \mathrm{\ se\ r<R}\\
-        \frac{Q}{2\pi\varepsilon_0 h} \ln\bigl(\frac{r}{R}\bigr)  \ \ \ \ \mathrm{\ se\ r\geq R}\end{cases} } \ex
+        \frac{Q}{2\pi\varepsilon_0 h r} \ \ \ \ \ \ \ \mathrm{\ se\ r\geq R}
+        \end{aligned} \end{cases} } \ex
+        \e{ V(r)=\begin{cases} \begin{aligned} 
+        0 \qquad \qquad \ \ \ \mathrm{\ se\ r<R}\\
+        \frac{Q}{2\pi\varepsilon_0 h} \ln\bigl(\frac{r}{R}\bigr)  \ \ \mathrm{\ se\ r\geq R}
+        \end{aligned} \end{cases} } \ex
     
 \hline
 \item [$\blacksquare$] \g{CONDUTTORI}
@@ -205,7 +211,7 @@ MATRICOLA: \\
     \it \g{Forza agente sul dipolo}
         \e{\h{F}=\nabla(\h{p}\cdot\h{E})} \ex
     \it \g{Energia pot. tra due dipoli}
-        \e{U=\frac{1}{4\pi\varepsilon_0r^2}[\h{p_1}\cdot\h{p_2}-3(\h{p_1}\h{u}_r)(\h{p_2}\cdot\h{u}_r)]}\ex
+        \e{U=\frac{[\h{p_1}\cdot\h{p_2}-3(\h{p_1}\h{u}_r)(\h{p_2}\cdot\h{u}_r)]}{4\pi\varepsilon_0r^2}}\ex
     \it \g{Forza tra dipoli}\\
         Dipoli concordi = F repulsiva
         \e{\h{F}=\frac{3p_1p_2}{4\pi\varepsilon_0r^4}\h{u}_r}\ex
@@ -444,7 +450,6 @@ MATRICOLA: \\
     \it \g{V e I efficace}
         \e{V_{eff}=\frac{\sqrt{2}}{2}V_0 \qquad I_{eff}=\frac{\sqrt{2}}{2}I_0} \ex
 
-\newpage
 \hline
 \item [$\blacksquare$] \g{CAMPO EM e OTTICA}
     \it \g{Campi in un'onda EM} \\
@@ -494,7 +499,7 @@ MATRICOLA: \\
         \e{t_pi=\frac{2n_i\cos\theta_i}{n_i\cos\theta_t+n_t\cos\theta_i}} \ex
         \e{T_\sigma=1-R_\sigma \qquad T_\pi=1-R_\pi} \ex
         Luce NON polarizzata
-        \e{R=\frac{1}{2}(R_\sigma+R_\pi) \qquad T=\frac{1}{2}(T_\sigma+T_\pi)} \ex
+        \e{R=\frac{1}{2}(R_\sigma+R_\pi) \quad T=\frac{1}{2}(T_\sigma+T_\pi)} \ex
         Incidenza normale ($\cos\theta_i?\cos\theta_t=1)$
         \e{r=\frac{n_i-n_t}{n_i+n_t}} \ex
         \e{R=\biggl(\frac{n_i-n_t}{n_i+n_t}\biggr)^2} \ex
@@ -512,9 +517,6 @@ MATRICOLA: \\
     \it \g{Rapporto di polarizzazione}
         \e{\beta_R=\frac{P_R^\sigma-P_R^\pi}{P_R^\sigma+P_R^\pi}} \ex
         \e{\beta_T=\frac{P_T^\sigma-P_T^\pi}{P_T^\sigma+P_T^\pi}} \ex
-
-    \vspace{220pt}
-
 
 \hline
 \item [$\blacksquare$] \g{INTERFERENZA e DIFFRAZIONE}  
@@ -677,7 +679,7 @@ MATRICOLA: \\
     \hline
                 & Cartesiane & Sferiche & Cilindriche   \\ 
     \hline 
-    & & & \\
+    & & & \\[0pt]
     Gradiente $(\nabla f=)$ 
     &  $\frac{\partial f}{\partial x}\h{x}+\frac{\partial f}{\partial y}\h{y}+\frac{\partial f}{\partial z}\h{z}$ 
     & $\frac{\partial f}{\partial r}\h{r}+\frac{1}{r}\frac{\partial f}{\partial \theta}\h{\theta}+\frac{1}{r\sin\theta}\frac{\partial f}{\partial \phi}\h{\phi}$ 
@@ -694,21 +696,21 @@ MATRICOLA: \\
     & & & \\
     
     {Rotore $(\nabla\times\h{F}=)$ }
-    & {$\left( \begin{array}{c}
-         \frac{\partial F_z}{\partial y}-\frac{\partial F_y}{\partial z} \\ \\
-         \frac{\partial F_x}{\partial z}-\frac{\partial F_z}{\partial x} \\ \\
-         \frac{\partial F_y}{\partial x}-\frac{\partial F_x}{\partial y} \\      
-    \end{array} \right) $}
-    & {$\left(\begin{array}{c}
-        \frac{1}{r \sin \theta} \biggl(\frac{\partial F_\phi \sin\theta}{\partial \theta}-\frac{\partial F_\theta}{\partial \phi}\biggr) \\ \\
-        \frac{1}{r}\biggl(\frac{1}{\sin\theta}\frac{\partial F_r}{\partial \phi}-\frac{\partial (r F_\phi)}{\partial r} \biggr) \\ \\
-        \frac{1}{r}\biggl(\frac{\partial (r F_\theta)}{\partial r}-\frac{\partial F_r}{\partial \theta}\biggr) \\        
-    \end{array}\right) $}
-    & {$\left(\begin{array}{c}
-        \biggl(\frac{1}{r}\frac{\partial F_z}{\partial \phi}-\frac{\partial F_\phi}{\partial z}\biggr) \\ \\
-        \biggl(\frac{\partial F_r}{\partial z}-\frac{\partial (r F_z)}{\partial r} \biggr) \\ \\
-        \frac{1}{r}\biggl(\frac{\partial (r F_\phi)}{\partial r}-\frac{\partial F_r}{\partial \phi}\biggr) \\        
-    \end{array}\right) $} \\
+    & {$\left( \begin{array}{c} \begin{aligned}
+         \frac{\partial F_z}{\partial y}-\frac{\partial F_y}{\partial z} \\ 
+         \frac{\partial F_x}{\partial z}-\frac{\partial F_z}{\partial x} \\ 
+         \frac{\partial F_y}{\partial x}-\frac{\partial F_x}{\partial y} \\     
+    \end{aligned} \end{array} \right) $}
+    & {$\left(\begin{array}{c} \begin{aligned}
+        \frac{1}{r \sin \theta} \biggl(\frac{\partial F_\phi \sin\theta}{\partial \theta}-\frac{\partial F_\theta}{\partial \phi}\biggr) \\
+        \frac{1}{r}\biggl(\frac{1}{\sin\theta}\frac{\partial F_r}{\partial \phi}-\frac{\partial (r F_\phi)}{\partial r} \biggr) \\
+        \frac{1}{r}\biggl(\frac{\partial (r F_\theta)}{\partial r}-\frac{\partial F_r}{\partial \theta}\biggr) \\       
+    \end{aligned} \end{array}\right) $}
+    & {$\left(\begin{array}{c} \begin{aligned}
+        \biggl(\frac{1}{r}\frac{\partial F_z}{\partial \phi}-\frac{\partial F_\phi}{\partial z}\biggr) \\
+        \biggl(\frac{\partial F_r}{\partial z}-\frac{\partial (r F_z)}{\partial r} \biggr) \\
+        \frac{1}{r}\biggl(\frac{\partial (r F_\phi)}{\partial r}-\frac{\partial F_r}{\partial \phi}\biggr) \\
+    \end{aligned} \end{array}\right) $} \\
     & & & \\ \hline
     \multicolumn{4}{|c|}{Il laplaciano di un campo scalare $\Phi$, in qualunque coordinata, è $\nabla\cdot\nabla\Phi$} \\
     \hline
