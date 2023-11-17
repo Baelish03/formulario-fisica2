@@ -12,3 +12,4 @@ Per sapere se l'ultima modifica suggerita è già stata apportata, qui ci sarà 
 5) <b>Aggiunta recapito mail istituzionale</b>
 6) <b>Campo di una sfera carica uniformemente</b> (36) "3 al denominatore"
 7) <b>Equazioni a sistema</b> (36,37,38,39,50,51) "Migliorata la visualizzazione delle formule nei sistemi"
+8) <b>Disco uniformemente carico</b> (47) "Errore di segno sul potenziale"
