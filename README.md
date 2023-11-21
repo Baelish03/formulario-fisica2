@@ -14,3 +14,4 @@ Per sapere se l'ultima modifica suggerita è già stata apportata, qui ci sarà 
 7) <b>Equazioni a sistema</b> (36,37,38,39,50,51) "Migliorata la visualizzazione delle formule nei sistemi"
 8) <b>Disco uniformemente carico</b> (47) "Errore di segno sul potenziale"
 9) <b>Energia potenziale fra due dipoli</b> (79) "Esponente sulla r al denominatore 3, non 2"
+10) <b>Divergenza e rotore in coordinate cilindriche</b> "r mancante nella divergenza, r in più nel rotore"

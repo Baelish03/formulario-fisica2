@@ -690,7 +690,7 @@ MATRICOLA: \\
     Divergenza $(\nabla\cdot\h{F}=)$ 
     & $\frac{\partial F_x}{\partial x}+\frac{\partial F_y}{\partial y}+\frac{\partial F_z}{\partial z}$ 
     & $\frac{1}{r^2}\frac{\partial r^2 F_r}{\partial r}+\frac{1}{r\sin\theta}\frac{\partial F_\theta\sin\theta}{\partial \theta}+\frac{1}{r\sin\theta}\frac{\partial F_\phi}{\partial \phi}$ 
-    & $\frac{1}{r}\frac{\partial F_r}{\partial r}+\frac{1}{r}\frac{\partial F_\theta}{\partial \theta}+\frac{\partial F_z}{\partial z}$ \\
+    & $\frac{1}{r}\frac{\partial (r F_r)}{\partial r}+\frac{1}{r}\frac{\partial F_\theta}{\partial \theta}+\frac{\partial F_z}{\partial z}$ \\
     & & & \\
     \hline
     & & & \\
@@ -708,7 +708,7 @@ MATRICOLA: \\
     \end{aligned} \end{array}\right) $}
     & {$\left(\begin{array}{c} \begin{aligned}
         \biggl(\frac{1}{r}\frac{\partial F_z}{\partial \phi}-\frac{\partial F_\phi}{\partial z}\biggr) \\
-        \biggl(\frac{\partial F_r}{\partial z}-\frac{\partial (r F_z)}{\partial r} \biggr) \\
+        \biggl(\frac{\partial F_r}{\partial z}-\frac{\partial F_z}{\partial r} \biggr) \\
         \frac{1}{r}\biggl(\frac{\partial (r F_\phi)}{\partial r}-\frac{\partial F_r}{\partial \phi}\biggr) \\
     \end{aligned} \end{array}\right) $} \\
     & & & \\ \hline
