@@ -15,3 +15,4 @@ Per sapere se l'ultima modifica suggerita è già stata apportata, qui ci sarà 
 8) <b>Disco uniformemente carico</b> (47) "Errore di segno sul potenziale"
 9) <b>Energia potenziale fra due dipoli</b> (79) "Esponente sulla r al denominatore 3, non 2"
 10) <b>Divergenza e rotore in coordinate cilindriche</b> "r mancante nella divergenza, r in più nel rotore"
+11) <b>Energia interna del condensatore</b> (62) "esponente mancante dopo V"
