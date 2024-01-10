@@ -17,4 +17,7 @@ Per sapere se l'ultima modifica suggerita è già stata apportata, qui ci sarà 
 10) <b>Divergenza e rotore in coordinate cilindriche</b> "r mancante nella divergenza, r in più nel rotore"
 11) <b>Energia interna del condensatore</b> (62) "esponente mancante dopo V"
 12) <b>Leggi di Ohm</b> (91) "Cancellata una "d" dimenticata"
-13) <b>B e L del solenoide ideale</b> (109-126) "Sostituito la l maiuscola con la minuscola per indicare la lunghezza e non confondere con l'induttanza"
+13) <b>B e L del solenoide ideale</b> (109,126) "Sostituito la l maiuscola con la minuscola per indicare la lunghezza e non confondere con l'induttanza"
+14) <b>Impedenza e corrente massima in RLC</b> (168,169,177) "Sostituito il segno da + a - nella parte immaginaria dell'impedenza"
+    <b>Corrente massima</b> (177) "Sostituito ω con Ω per indicare la frequenza forzante"
+    <b>Smorzamento debole</b> (171) "Aggiunta parentesi chiusa mancante" 
