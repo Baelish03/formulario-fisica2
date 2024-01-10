@@ -21,4 +21,5 @@ Per sapere se l'ultima modifica suggerita è già stata apportata, qui ci sarà 
 14) <b>Impedenza e corrente massima in RLC</b> (168,169,177) "Sostituito il segno da + a - nella parte immaginaria dell'impedenza"
     
     <b>Corrente massima</b> (177) "Sostituito ω con Ω per indicare la frequenza forzante"
+    
     <b>Smorzamento debole</b> (171) "Aggiunta parentesi chiusa mancante" 
